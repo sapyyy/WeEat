@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Template</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+  <div id="invoice" class="bg-white shadow-lg rounded-xl p-6 w-full max-w-md">
+    <h2 class="text-xl font-bold text-center mb-4">--------------------------------------------------<br>
+      Delivery Details<br>
+      --------------------------------------------------
+    </h2>
+    
+    <div id="delivery-details" class="mb-4 text-sm">
+      <!-- Fetched details will go here -->
+    </div>
+
+    <h2 class="text-xl font-bold text-center mb-4">--------------------------------------------------<br>
+      🍲 Food Items & Quantity<br>
+      --------------------------------------------------
+    </h2>
+
+    <ul id="food-items" class="list-disc pl-6 space-y-1 text-sm">
+      <!-- Food list will be inserted dynamically -->
+    </ul>
+  </div>
+
+  <script>
+    // Mock "background data"
+    const invoiceData = {
+      orderId: "ORD123456",
+      location: "Kolkata, West Bengal",
+      contactNumber: "+91 9876543210",
+      items: [
+        { name: "Rice", quantity: "2 kg" },
+        { name: "Paneer Curry", quantity: "1 kg" },
+        { name: "Chapati", quantity: "30 pcs" }
+      ]
+    };
+
+    // Injecting delivery details
+    document.getElementById("delivery-details").innerHTML = `
+      <p><strong>Order ID:</strong> ${invoiceData.orderId}</p>
+      <p><strong>Location:</strong> ${invoiceData.location}</p>
+      <p><strong>Contact Number:</strong> ${invoiceData.contactNumber}</p>
+    `;
+
+    // Injecting food items
+    const foodList = document.getElementById("food-items");
+    invoiceData.items.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - ${item.quantity}`;
+      foodList.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
