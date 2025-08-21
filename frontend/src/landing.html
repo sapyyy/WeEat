@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeChat</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 text-gray-800 m-2">
+    <div class="flex h-screen">
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white shadow-md flex flex-col rounded-lg">
+        <div class="p-4 font-bold text-lg border-b rounded-lg">WeChat</div>
+        <nav class="flex-1 p-4 space-y-2">
+          <div class="p-2 hover:bg-gray-100 rounded">Dashboard</div>
+          <div class="p-2 hover:bg-gray-100 rounded">Shipments</div>
+          <div class="p-2 hover:bg-gray-100 rounded">Parcels</div>
+          <div class="p-2 hover:bg-gray-100 rounded">Branches</div>
+          <div class="p-2 hover:bg-gray-100 rounded">Clients</div>
+        </nav>
+        <div class="p-4 border-t">
+          <button
+            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
+          >
+            Create shipment
+          </button>
+        </div>
+        <div class="p-4 flex items-center space-x-2 border-t">
+          <div class="w-10 h-10 rounded-full bg-gray-300"></div>
+          <div>
+            <p class="font-medium">Jane Smith</p>
+            <p class="text-xs text-gray-500">Description</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-6 overflow-y-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+          <div
+            class="flex items-center space-x-2 bg-white shadow p-2 rounded-lg w-1/3"
+          >
+            <input
+              type="text"
+              placeholder="Search by tracking number"
+              class="w-full outline-none text-sm"
+            />
+          </div>
+          <div class="flex items-center space-x-6">
+            <span class="text-gray-500">City: Barcelona</span>
+            <span class="text-gray-500">Wed 15 Jun, 12:10:22</span>
+          </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="grid grid-cols-4 gap-4 mb-6">
+          <div class="bg-white shadow p-4 rounded-lg">
+            <p class="text-sm text-gray-500">New packages</p>
+            <p class="text-2xl font-bold">222</p>
+          </div>
+          <div class="bg-white shadow p-4 rounded-lg">
+            <p class="text-sm text-gray-500">Ready for shipping</p>
+            <p class="text-2xl font-bold">60</p>
+          </div>
+          <div class="bg-white shadow p-4 rounded-lg">
+            <p class="text-sm text-gray-500">In transit</p>
+            <p class="text-2xl font-bold">2,000</p>
+          </div>
+          <div class="bg-white shadow p-4 rounded-lg">
+            <p class="text-sm text-gray-500">Delivered</p>
+            <p class="text-2xl font-bold">3,600</p>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="grid grid-clols-3 gap-4 mb-6">
+          <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="font-semibold mb-3">Delayed delivery</h3>
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-left text-gray-500">
+                  <th>Destination</th>
+                  <th>Truck</th>
+                  <th>Time arrive</th>
+                  <th>Delay</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Valencia - Barcelona</td>
+                  <td>B435324</td>
+                  <td>07:05 AM</td>
+                  <td>5:05h</td>
+                </tr>
+                <tr>
+                  <td>Cordoba - Barcelona</td>
+                  <td>B438987</td>
+                  <td>10:05 AM</td>
+                  <td>2:05h</td>
+                </tr>
+                <tr>
+                  <td>Seville - Barcelona</td>
+                  <td>B435322</td>
+                  <td>11:40 AM</td>
+                  <td>0:30h</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="font-semibold mb-3">Daily plan</h3>
+            <p>Shipments processed: 1,010 / 2,020</p>
+            <p>Orders processed: 650 / 1,300</p>
+            <p>Requests considered: 10 / 20</p>
+          </div>
+
+          <div class="bg-white shadow rounded-lg p-4">
+            <h3 class="font-semibold mb-3">Recent requests</h3>
+            <ul class="text-sm space-y-2">
+              <li>Parcel redirection - 1 min ago</li>
+              <li>Packing problem - 10 min ago</li>
+              <li>Machine breakdown - 20 min ago</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Available Trucks -->
+        <div class="bg-white shadow rounded-lg p-4">
+          <h3 class="font-semibold mb-3">Available trucks</h3>
+          <ul class="space-y-2 text-sm">
+            <li>V435322 (Barcelona - Valencia) - 90%</li>
+            <li>S890324 (Barcelona - Seville) - 50%</li>
+            <li>S423426 (Barcelona - Seville) - 25%</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
