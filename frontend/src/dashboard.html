@@ -17,12 +17,11 @@
       <!-- Sidebar -->
       <aside class="w-64 bg-white shadow-md flex flex-col rounded-lg">
         <div class="p-4 font-bold text-lg border-b rounded-lg">WeEat</div>
-        <nav class="flex-1 p-4 space-y-2">
-          <div class="p-2 hover:bg-gray-100 rounded">Dashboard</div>
-          <div class="p-2 hover:bg-gray-100 rounded">Shipments</div>
-          <div class="p-2 hover:bg-gray-100 rounded">Parcels</div>
-          <div class="p-2 hover:bg-gray-100 rounded">Branches</div>
-          <div class="p-2 hover:bg-gray-100 rounded">Clients</div>
+        <nav id="navBtn" class="flex-1 p-4 space-y-2">
+          <div class="p-2 hover:bg-gray-100 rounded" id="dashboardBtn">Dashboard</div>
+          <div class="p-2 hover:bg-gray-100 rounded" id="addFoodBtn">Add Food</div>
+          <div class="p-2 hover:bg-gray-100 rounded" id="listingBtn">Listing</div>
+          <div class="p-2 hover:bg-gray-100 rounded" id="deliveryBtn">Delivery</div>
         </nav>
         <div class="p-4 border-t">
           <button
@@ -41,7 +40,7 @@
       </aside>
 
       <!-- Main Content -->
-      <main class="flex-1 p-6 overflow-y-auto">
+      <main id="dashboard" class="flex-1 p-6 overflow-y-auto">
         <!-- Header -->
         <div class="flex justify-between items-center mb-6">
           <div
@@ -142,6 +141,99 @@
           </ul>
         </div>
       </main>
+      <main id="addFood" class="flex-1 p-6 overflow-y-auto hidden">
+        <div class="flex h-screen">
+      <!-- Main Content -->
+      <main class="flex-1 p-6 overflow-y-auto">
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold">Food Donation Dashboard</h2>
+          <span class="text-gray-500">Thu 21 Aug, 12:45 PM</span>
+        </div>
+
+        <!-- Cards Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Food Type -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Food Type</h3>
+            <select class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+              <option>-- Select Food Type --</option>
+              <option>Rice</option>
+              <option>Pulau/Biriyani</option>
+              <option>Chapati/Roti</option>
+              <option>Idly/Dosa</option>
+              <option>Daal/Paneer</option>
+              <option>Mix Veg Curry</option>
+              <option>Sandwich/Sweets/Noodles</option>
+            </select>
+          </div>
+
+          <!-- Food Quantity -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Food Quantity</h3>
+            <input
+              type="number"
+              placeholder="Enter quantity (kg/packets)"
+              class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Freshness -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Prepared at</h3>
+            <input
+              type="time"
+              class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Pickup Date -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Pickup Date</h3>
+            <input
+              type="date"
+              class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Pickup Time -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Pickup Time</h3>
+            <input
+              type="time"
+              class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <!-- Pickup Location -->
+          <div class="bg-white shadow rounded-lg p-6">
+            <h3 class="font-semibold mb-3">Pickup Location</h3>
+            <input
+              type="text"
+              placeholder="Enter address or location"
+              class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Section -->
+        <div class="mt-8 flex justify-end">
+          <button
+            class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
+          >
+            Confirm Donation
+          </button>
+        </div>
+      </main>
     </div>
+
+      </main>
+      <main id="listing" class="flex-1 p-6 overflow-y-auto hidden">
+      </main>
+      <main id="delivery" class="flex-1 p-6 overflow-y-auto hidden">
+      </main>
+    </div>
+    <script src="dashboard.js"></script>
   </body>
 </html>
