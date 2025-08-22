@@ -21,6 +21,9 @@ function addHide(){
 }
 
 navBtn.addEventListener("click",function(e){
+    if(e.target.id=="navBtn"){
+        return;
+    }
     let elId= e.target.id;
     console.log(elId);
     let newElId = elId.replace("Btn","");
@@ -41,3 +44,39 @@ editBtn.addEventListener("click",function(e){
     edit.classList.remove("hidden")
     
 })
+
+
+
+// Add food Form functions
+const allData =[];
+let divUl = document.querySelector("#divUl")
+let donationForm = document.querySelector("#donationForm");
+donationForm.addEventListener("submit",function(e){
+    e.preventDefault();
+    const formData = new FormData(donationForm);
+    let data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+    allData.push(data);
+    let newLi = document.createElement("li")
+    newLi.innerText = data.foodType;
+    divUl.appendChild(newLi);
+    donationForm.reset();
+    console.log(allData);
+})
+let foodSubmitBtnFinal = document.querySelector("#foodSubmitBtnFinal");
+foodSubmitBtnFinal.addEventListener("click",(e)=>{
+    e.preventDefault();
+    axios.post("http://localhost:5000/donor/listfood", allData)
+    .then(res => {
+        console.log("Data sent successfully:", res.data);
+        })
+    .catch(err => {
+        console.error("Error sending data:", err);
+    });
+    
+})
+
+
+
