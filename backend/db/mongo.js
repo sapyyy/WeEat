@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
-const { mongoURI } = process.env.MONGO_URI;
 
 // connecting to the db
-mongoose.connect(mongoURI);
+mongoose.connect(process.env.URI);
 
 // defining schema for food
 const foodSchema = new Schema({
@@ -24,7 +23,7 @@ const foodSchema = new Schema({
       "Sweets",
       "Noodles",
     ],
-    required: "true",
+    required: true,
   },
   quantity: {
     type: Number,
@@ -49,6 +48,10 @@ const donorSchema = new Schema({
     type: String,
     required: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
   city: {
     type: String,
     required: true,
@@ -56,8 +59,6 @@ const donorSchema = new Schema({
   phoneNo: {
     type: Number,
     required: true,
-    minLength: 10,
-    maxLength: 10,
   },
   organization: {
     type: String,
@@ -100,8 +101,6 @@ const receiverSchema = new Schema({
   phoneNo: {
     type: Number,
     required: true,
-    minLength: 10,
-    maxLength: 10,
   },
   receiverType: {
     type: String,
@@ -164,9 +163,8 @@ const deliverySchema = new Schema({
   },
   phoneNo: {
     type: Number,
-    minLength: 10,
-    maxLength: 10,
     unique: true,
+    required: true,
   },
 });
 
