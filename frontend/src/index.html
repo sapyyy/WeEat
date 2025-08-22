@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeEat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="bg-gray-100 flex h-screen font-sans">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow flex flex-col justify-between">
+        <div>
+            <div class="p-6 text-2xl font-bold text-green-600">WeEat</div>
+            <nav class="space-y-2 px-4">
+                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Dashboard</a>
+                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Mission</a>
+                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Impact</a>
+                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Volunteers</a>
+                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">FAQ</a>
+            </nav>
+        </div>
+        <div class="p-4 border-t">
+            <div class="flex items-center space-x-3">
+                <div class="text-3xl">🧑‍🤝‍🧑</div>
+                <div>
+                    <p class="text-sm font-semibold">WeEat</p>
+                    <p class="text-xs text-gray-500">Zero Food Waste</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 overflow-y-auto">
+        <!-- Header Greeting -->
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-xl font-bold"> WeEat - Save the hungry citizen...🍽️</h1>
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-sm">🌍 Zero Hunger Movement</span>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-white shadow rounded-lg p-4 text-center">
+                <p class="text-gray-600">Plates Served</p>
+                <p class="text-2xl font-bold text-green-600">1000+</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 text-center">
+                <p class="text-gray-600">Campus Donors</p>
+                <p class="text-2xl font-bold text-green-600">200+</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 text-center">
+                <p class="text-gray-600">NGOs Supported</p>
+                <p class="text-2xl font-bold text-green-600">50+ </p>
+            </div>
+        </div>
+
+
+        <!-- Mission & Impact -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <!-- Mission / Hunger Facts -->
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-bold mb-4">🎯 Our Mission</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="text-green-600 text-2xl">🍽️</div>
+                        <p class="text-gray-700"><span class="font-semibold">The challenge:</span> Making food
+                            consistently available to everyone who needs it.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-red-500 text-2xl">⚠️</div>
+                        <p class="text-gray-700"><span class="font-semibold">Hunger kills many people each year</span>,
+                            more than AIDS, malaria, and terrorism combined.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-yellow-500 text-2xl">⏱️</div>
+                        <p class="text-gray-700"><span class="font-semibold">Every 10 seconds</span>, a child dies from
+                            hunger.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-blue-500 text-2xl">🌎</div>
+                        <p class="text-gray-700"><span class="font-semibold">82%</span> of hungry people live in
+                            countries with food surpluses, not shortages.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-purple-500 text-2xl">😴</div>
+                        <p class="text-gray-700">One in every eight people sleeps hungry each night.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-orange-500 text-2xl">🥘</div>
+                        <p class="text-gray-700">One-third of the food produced globally is never consumed.</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <div class="text-pink-500 text-2xl">👥</div>
+                        <p class="text-gray-700"><span class="font-semibold">850 million</span> hungry people exist in
+                            the world.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- About Us Block -->
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-bold mb-4">🌍 The Idea</h2>
+                <div class="space-y-4 text-gray-700 text-sm leading-6">
+                    <p>
+                        <span class="font-bold text-gray-800">Who We Are:</span> We are a student-led initiative aiming
+                        to minimize food waste and feed the less fortunate within and around our campus. Our platform
+                        connects campus canteens, hostels, and restaurants with local NGOs, orphanages, old-age
+                        homes, and underprivileged families. Volunteers – mostly students and young professionals –
+                        help collect and deliver surplus food efficiently.
+                    </p>
+
+                    <hr class="border-0 h-2 bg-black-600 mb-4">
+                    <p><span class="font-bold text-gray-800">Our Goal:</span> To create a self-sustaining,
+                        community-driven
+                        system where surplus food never goes to waste and everyone can contribute in their free
+                        time.</p>
+
+                    <hr class="border-0 h-2 bg-black-600 mb-4">
+                    <p><span class="font-bold text-gray-800">Our Vision:</span> Simple and impactful: Reduce food
+                        wastage,
+                        fight hunger, and foster a culture of giving. We aim to establish autonomous campus chapters
+                        that manage their local food surplus while inspiring others to contribute, ensuring that
+                        surplus food is used to feed those who need it most.</p>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Progress + Beneficiary Messages -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-bold mb-4">📊 Progress</h2>
+                <p class="text-sm text-gray-600 mb-4">
+                    Together, we’ve reached <span class="font-semibold text-green-600">75%</span> of this month’s food
+                    distribution goal.
+                </p>
+                <canvas id="impactChart" class="w-full h-40"></canvas>
+            </div>
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-bold mb-4">💬 Voices of Change</h2>
+                <ul class="space-y-3 text-sm text-gray-700">
+                    <li>"Thank you RHA for ensuring our community never sleeps hungry!" – Local Partner</li>
+                    <li>"The smiles on children’s faces are priceless." – Volunteer</li>
+                    <li>"Food that would have been wasted fed 200 people today." – NGO</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chart Script -->
+    <script>
+        const ctx = document.getElementById('impactChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Rice', 'Bread', 'Vegetables', 'Dairy'],
+                datasets: [{
+                    data: [40, 20, 25, 15],
+                    backgroundColor: ['#34d399', '#60a5fa', '#facc15', '#f87171']
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+        });
+    </script>
+
+</body>
+
+</html>
