@@ -9,30 +9,30 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-gray-100 flex h-screen font-sans">
+<body class="min-h-screen bg-gradient-to-br from-green-100 via-green-200 to-green-300">
 
-    <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow flex flex-col justify-between">
-        <div>
-            <div class="p-6 text-2xl font-bold text-green-600">WeEat</div>
-            <nav class="space-y-2 px-4">
-                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Dashboard</a>
-                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Mission</a>
-                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Impact</a>
-                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">Volunteers</a>
-                <a href="#" class="block px-3 py-2 rounded-lg hover:bg-green-100 text-gray-700">FAQ</a>
-            </nav>
+    <header class="flex justify-between items-center p-6 bg-white shadow">
+        <!-- Left: Brand -->
+        <div class="text-2xl font-bolder text-green-600">WeEat</div>
+
+        <!-- Center: Navbar -->
+        <nav class="space-x-6">
+            <!-- <a href="#" class="text-gray-700 hover:text-green-600">Dashboard</a> -->
+            <a href="#" class="text-gray-700 hover:text-green-600 font-serif">Impact</a>
+            <a href="#" class="text-gray-700 hover:text-green-600 font-serif">Gallery</a>
+            <a href="suggestion.html" class="text-gray-700 hover:text-green-600 font-serif">Suggestions</a>
+            <a href="faq.html" class="text-gray-700 hover:text-green-600 font-serif">FAQ</a>
+
+        </nav>
+
+        <!-- Right: Login / Signup -->
+        <div class="space-x-4">
+            <a href="login.html"
+                class="px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50">Login</a>
+            <a href="signup.html" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700">Signup</a>
         </div>
-        <div class="p-4 border-t">
-            <div class="flex items-center space-x-3">
-                <div class="text-3xl">🧑‍🤝‍🧑</div>
-                <div>
-                    <p class="text-sm font-semibold">WeEat</p>
-                    <p class="text-xs text-gray-500">Zero Food Waste</p>
-                </div>
-            </div>
-        </div>
-    </aside>
+    </header>
+
 
     <!-- Main Content -->
     <main class="flex-1 p-6 overflow-y-auto">
@@ -57,7 +57,6 @@
                 <p class="text-2xl font-bold text-green-600">50+ </p>
             </div>
         </div>
-
 
         <!-- Mission & Impact -->
         <div class="grid md:grid-cols-2 gap-6 mb-6">
@@ -101,8 +100,6 @@
                 </div>
             </div>
 
-
-
             <!-- About Us Block -->
             <div class="bg-white shadow rounded-lg p-6">
                 <h2 class="text-lg font-bold mb-4">🌍 The Idea</h2>
@@ -115,13 +112,13 @@
                         help collect and deliver surplus food efficiently.
                     </p>
 
-                    <hr class="border-0 h-2 bg-black-600 mb-4">
+                    <hr class="border-0 h-1 bg-gray-300 my-4">
                     <p><span class="font-bold text-gray-800">Our Goal:</span> To create a self-sustaining,
                         community-driven
                         system where surplus food never goes to waste and everyone can contribute in their free
                         time.</p>
 
-                    <hr class="border-0 h-2 bg-black-600 mb-4">
+                    <hr class="border-0 h-1 bg-gray-300 my-4">
                     <p><span class="font-bold text-gray-800">Our Vision:</span> Simple and impactful: Reduce food
                         wastage,
                         fight hunger, and foster a culture of giving. We aim to establish autonomous campus chapters
@@ -130,44 +127,24 @@
                 </div>
             </div>
         </div>
-        </div>
-
-
-        <!-- Progress + Beneficiary Messages -->
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white shadow rounded-lg p-6">
-                <h2 class="text-lg font-bold mb-4">📊 Progress</h2>
-                <p class="text-sm text-gray-600 mb-4">
-                    Together, we’ve reached <span class="font-semibold text-green-600">75%</span> of this month’s food
-                    distribution goal.
-                </p>
-                <canvas id="impactChart" class="w-full h-40"></canvas>
-            </div>
-            <div class="bg-white shadow rounded-lg p-6">
-                <h2 class="text-lg font-bold mb-4">💬 Voices of Change</h2>
-                <ul class="space-y-3 text-sm text-gray-700">
-                    <li>"Thank you RHA for ensuring our community never sleeps hungry!" – Local Partner</li>
-                    <li>"The smiles on children’s faces are priceless." – Volunteer</li>
-                    <li>"Food that would have been wasted fed 200 people today." – NGO</li>
-                </ul>
-            </div>
-        </div>
     </main>
 
     <!-- Chart Script -->
     <script>
-        const ctx = document.getElementById('impactChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Rice', 'Bread', 'Vegetables', 'Dairy'],
-                datasets: [{
-                    data: [40, 20, 25, 15],
-                    backgroundColor: ['#34d399', '#60a5fa', '#facc15', '#f87171']
-                }]
-            },
-            options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
-        });
+        const ctx = document.getElementById('impactChart')?.getContext('2d');
+        if (ctx) {
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Rice', 'Bread', 'Vegetables', 'Dairy'],
+                    datasets: [{
+                        data: [40, 20, 25, 15],
+                        backgroundColor: ['#34d399', '#60a5fa', '#facc15', '#f87171']
+                    }]
+                },
+                options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+            });
+        }
     </script>
 
 </body>
