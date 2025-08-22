@@ -1,51 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeChat</title>
-    <link rel="stylesheet" href="./output.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-<<<<<<< HEAD
-  <body class="bg-gray-100 text-gray-800 m-2">
-    <div class="flex h-screen">
-      <!-- Sidebar -->
-      <aside class="w-64 bg-white shadow-md flex flex-col rounded-lg">
-        <div class="p-4 font-bold text-lg border-b rounded-lg">WeEat</div>
-        <nav id="navBtn" class="flex-1 p-4 space-y-2">
-          <div class="p-2 hover:bg-gray-100 rounded" id="dashboardBtn">
-            Dashboard
-          </div>
-          <div class="p-2 hover:bg-gray-100 rounded" id="addFoodBtn">
-            Add Food
-          </div>
-          <div class="p-2 hover:bg-gray-100 rounded" id="listingBtn">
-            Listing
-          </div>
-          <div class="p-2 hover:bg-gray-100 rounded" id="deliveryBtn">
-            Delivery
-          </div>
-        </nav>
-        <div class="p-4 border-t">
-          <button
-            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700"
-          >
-            Edit Profile
-          </button>
-        </div>
-        <div class="p-4 flex items-center space-x-2 border-t">
-          <div
-            class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 text-2xl"
-          >
-            👩‍🍳
-=======
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,32 +11,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-100 text-gray-800 m-2">
+<body class="bg-gray-100 text-gray-800 p-2">
   <div class="flex h-screen">
     <!-- Sidebar -->
-    <aside class="w-64 bg-white shadow-md flex flex-col rounded-lg">
-      <div class="p-4 font-bold text-lg border-b rounded-lg">WeEat</div>
-      <nav id="navBtn" class="flex-1 p-4 space-y-2">
+
+    <aside class="w-64 bg-white shadow-md flex flex-col h-screen">
+      <div class="p-4 font-bold text-lg border-b">WeEat</div>
+      <nav id="navBtn" class="flex-1 p-4 space-y-2 overflow-y-auto">
         <div class="p-2 hover:bg-gray-100 rounded" id="dashboardBtn">Dashboard</div>
         <div class="p-2 hover:bg-gray-100 rounded" id="addFoodBtn">Add Food</div>
-        <div class="p-2 hover:bg-gray-100 rounded" id="listingBtn">Listing</div>
         <div class="p-2 hover:bg-gray-100 rounded" id="deliveryBtn">Delivery</div>
+        <div class="p-2 hover:bg-gray-100 rounded" id="listingBtn">FAQ</div>
       </nav>
-      <div  class="p-4 border-t">
+      <div class="p-4 border-t">
         <button id="editBtn" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
           Edit Profile
         </button>
       </div>
       <div id="profileBtn" class="p-4 flex items-center space-x-2 border-t">
-        <div id="profileBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 text-2xl">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 text-2xl">
           👩‍🍳
         </div>
-        <div id="profileBtn">
+        <div>
           <p class="font-medium">Priyanka Garai</p>
           <p class="text-xs text-gray-500">HITK</p>
         </div>
       </div>
     </aside>
+
 
     <!-- Main Content -->
     <main id="dashboard" class="flex-1 p-6 overflow-y-auto">
@@ -134,302 +91,229 @@
           <p class="text-sm mb-2">You’ve helped reach <strong>65%</strong> of this month’s food rescue goal</p>
           <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
             <div class="bg-green-500 h-3 rounded-full" style="width: 65%;"></div>
->>>>>>> 2e8e2431fb868919f09914357130a63042b2b1ce
           </div>
 
-          <div>
-            <p class="font-medium">Priyanka Garai</p>
-            <p class="text-xs text-gray-500">HITK</p>
-          </div>
-        </div>
-      </aside>
-
-      <!-- Main Content -->
-      <main id="dashboard" class="flex-1 p-6 overflow-y-auto">
-        <!-- Header -->
-        <!-- Header -->
-        <!-- Header -->
-        <div class="flex justify-between items-center mb-6">
-          <!-- Left side: Welcome message -->
-          <div class="flex items-center space-x-6">
-            <span class="text-gray-500 font-semibold">
-              Welcome Back, Priyanka! 🌟 <br /><br />
-              Your generosity is reducing food waste. . .
-            </span>
-          </div>
-
-          <!-- Right side: Date -->
-          <div class="flex items-center space-x-2">
-            <span class="text-gray-500 font-medium">Badge Earned:</span>
-            <span
-              class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-base font-semibold"
-            >
-              🏅 Gold Donor
-            </span>
+          <h3 class="text-lg font-semibold mb-4">🍽 Donation Breakdown</h3>
+          <div class="w-full h-40">
+            <canvas id="donationChart"></canvas>
           </div>
         </div>
 
-        <!-- Overview -->
-        <div class="grid grid-cols-4 gap-4 mb-6">
-          <div class="bg-white shadow p-4 rounded-lg">
-            <p class="text-sm text-gray-500">Amount of meals donated</p>
-            <p class="text-2xl font-bold">222 kgs</p>
-          </div>
-          <div class="bg-white shadow p-4 rounded-lg">
-            <p class="text-sm text-gray-500">Number of meals</p>
-            <p class="text-2xl font-bold">60 units</p>
-          </div>
-          <div class="bg-white shadow p-4 rounded-lg">
-            <p class="text-sm text-gray-500">Carbon footprint avoided</p>
-            <p class="text-2xl font-bold">~27 kg CO₂e</p>
-          </div>
-          <div class="bg-white shadow p-4 rounded-lg">
-            <p class="text-sm text-gray-500">Carbon footprint avoided</p>
-            <p class="text-2xl font-bold">~2,500 liters</p>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <!-- 📊 Visualization -->
+        <div class="grid grid-cols-1 gap-6 mt-6">
+          <!-- 🙌 Engagement -->
           <div class="bg-white shadow p-6 rounded-lg">
-            <h3 class="text-lg font-semibold mb-4">📊 Progress</h3>
-            <p class="text-sm mb-2">
-              You’ve helped reach <strong>65%</strong> of this month’s food
-              rescue goal
-            </p>
-            <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
-              <div
-                class="bg-green-500 h-3 rounded-full"
-                style="width: 65%"
-              ></div>
-            </div>
+            <h3 class="text-lg font-semibold mb-4">🙌 Beneficiary Messages</h3>
+            <div class="grid grid-cols-1 gap-4">
+              <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <p class="text-sm italic">"Thank you for your generous donation. Our hostel students had a full meal
+                  today!"</p>
+                <p class="text-xs text-gray-500 mt-2">– NGO Partner</p>
+              </div>
 
-            <h3 class="text-lg font-semibold mb-4">🍽️ Donation Breakdown</h3>
-            <canvas id="donationChart" class="w-full h-64"></canvas>
-          </div>
+              <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <p class="text-sm italic">"Your support means hope for many families in need."</p>
+                <p class="text-xs text-gray-500 mt-2">– Local Shelter</p>
+              </div>
 
-          <div class="grid grid-cols-1 gap-6 mt-6">
-            <!-- 🙌 Engagement -->
-            <div class="bg-white shadow p-6 rounded-lg">
-              <h3 class="text-lg font-semibold mb-4">
-                🙌 Beneficiary Messages
-              </h3>
-              <div class="grid grid-cols-1 gap-4">
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                  <p class="text-sm italic">
-                    "Thank you for your generous donation. Our hostel students
-                    had a full meal today!"
-                  </p>
-                  <p class="text-xs text-gray-500 mt-2">– NGO Partner</p>
-                </div>
+              <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <p class="text-sm italic">"With your help, we were able to distribute meals to 200 people today."</p>
+                <p class="text-xs text-gray-500 mt-2">– Community Kitchen</p>
+              </div>
 
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                  <p class="text-sm italic">
-                    "Your support means hope for many families in need."
-                  </p>
-                  <p class="text-xs text-gray-500 mt-2">– Local Shelter</p>
-                </div>
-
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                  <p class="text-sm italic">
-                    "With your help, we were able to distribute meals to 200
-                    people today."
-                  </p>
-                  <p class="text-xs text-gray-500 mt-2">– Community Kitchen</p>
-                </div>
-
-                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
-                  <p class="text-sm italic">
-                    "The children were so happy to receive fresh fruits this
-                    week. Thank you!"
-                  </p>
-                  <p class="text-xs text-gray-500 mt-2">– Children’s Home</p>
-                </div>
+              <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                <p class="text-sm italic">"The children were so happy to receive fresh fruits this week. Thank you!"</p>
+                <p class="text-xs text-gray-500 mt-2">– Children’s Home</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Chart.js for Pie/Bar Chart -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script>
-          const ctx = document.getElementById("donationChart").getContext("2d");
-          new Chart(ctx, {
-            type: "pie", // you can change to 'bar'
-            data: {
-              labels: ["Rice", "Bread", "Vegetables", "Dairy"],
-              datasets: [
-                {
-                  data: [40, 25, 20, 15],
-                  backgroundColor: ["#10b981", "#3b82f6", "#f59e0b", "#ef4444"],
-                },
-              ],
-            },
-          });
-        </script>
-      </main>
-      <main id="addFood" class="flex-1 p-6 overflow-y-auto hidden">
-        <div class="flex h-screen">
-          <!-- Main Content -->
-          <main class="flex-1 p-6 overflow-y-auto">
-            <!-- Header -->
-            <div class="flex justify-between items-center mb-6">
-              <h2 class="text-2xl font-bold">Food Donation Dashboard</h2>
-              <span class="text-gray-500">Thu 21 Aug, 12:45 PM</span>
+      </div>
+
+      <!-- Chart.js for Pie/Bar Chart -->
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+        const ctx = document.getElementById('donationChart').getContext('2d');
+        new Chart(ctx, {
+          type: 'pie', // you can change to 'bar'
+          data: {
+            labels: ['Rice', 'Bread', 'Vegetables', 'Dairy'],
+            datasets: [{
+              data: [40, 25, 20, 15],
+              backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#ef4444']
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false
+          }
+        });
+      </script>
+
+    </main>
+    <main id="addFood" class="flex-1 p-6 overflow-y-auto hidden">
+      <div class="flex ">
+        <!-- Main Content -->
+        <main class="flex-1 p-6 overflow-y-auto">
+          <!-- Header -->
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Food Donation Dashboard</h2>
+            <span class="text-gray-500">Thu 21 Aug, 12:45 PM</span>
+          </div>
+
+          <!-- Form -->
+          <form id="donationForm" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Food Type -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Food Type</h3>
+              <select name="foodType" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500" required>
+                <option value="">-- Select Food Type --</option>
+                <option>Rice</option>
+                <option>Pulau/Biriyani</option>
+                <option>Chapati/Roti</option>
+                <option>Idly/Dosa</option>
+                <option>Daal/Paneer</option>
+                <option>Mix Veg Curry</option>
+                <option>Sandwich/Sweets/Noodles</option>
+              </select>
             </div>
 
-            <!-- Cards Section -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <!-- Food Type -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Food Type</h3>
-                <select
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                >
-                  <option>-- Select Food Type --</option>
-                  <option>Rice</option>
-                  <option>Pulau/Biriyani</option>
-                  <option>Chapati/Roti</option>
-                  <option>Idly/Dosa</option>
-                  <option>Daal/Paneer</option>
-                  <option>Mix Veg Curry</option>
-                  <option>Sandwich/Sweets/Noodles</option>
-                </select>
-              </div>
+            <!-- Food Quantity -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Food Quantity</h3>
+              <input type="number" name="quantity" placeholder="Enter quantity (kg/packets)"
+                class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500" required />
+            </div>
 
-              <!-- Food Quantity -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Food Quantity</h3>
-                <input
-                  type="number"
-                  placeholder="Enter quantity (kg/packets)"
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+            <!-- Prepared at -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Prepared at</h3>
+              <input type="time" name="preparedAt" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                required />
+            </div>
 
-              <!-- Freshness -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Prepared at</h3>
-                <input
-                  type="time"
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+            <!-- Pickup Date -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Pickup Date</h3>
+              <input type="date" name="pickupDate" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                required />
+            </div>
 
-              <!-- Pickup Date -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Pickup Date</h3>
-                <input
-                  type="date"
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+            <!-- Pickup Time -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Pickup Time</h3>
+              <input type="time" name="pickupTime" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                required />
+            </div>
 
-              <!-- Pickup Time -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Pickup Time</h3>
-                <input
-                  type="time"
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-
-              <!-- Pickup Location -->
-              <div class="bg-white shadow rounded-lg p-6">
-                <h3 class="font-semibold mb-3">Pickup Location</h3>
-                <input
-                  type="text"
-                  placeholder="Enter address or location"
-                  class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+            <!-- Pickup Location -->
+            <div class="bg-white shadow rounded-lg p-6">
+              <h3 class="font-semibold mb-3">Pickup Location</h3>
+              <input type="text" name="pickupLocation" placeholder="Enter address or location"
+                class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500" required />
             </div>
 
             <!-- Submit Section -->
-            <div class="mt-8 flex justify-end">
-              <button
-                class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
-              >
+            <div class="col-span-full mt-8 flex justify-end">
+              <button id="foodSubmitBtn" type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
                 Confirm Donation
               </button>
             </div>
-          </main>
-        </div>
-      </main>
-      <main id="listing" class="flex-1 p-6 overflow-y-auto hidden"></main>
-      <main id="delivery" class="flex-1 p-6 overflow-y-auto hidden">
-        <div
-          id="invoice"
-          class="bg-white shadow-lg p-6 w-full max-w-md rounded-lg"
-        >
-          <h2 class="text-xl font-bold text-center mb-4">
-            <br />
-            Delivery Details<br />
-            <hr class="my-4" />
-          </h2>
-
-          <div id="delivery-details" class="mb-4 text-sm leading-7 space-y-2">
-            <!-- Fetched details will go here -->
+            
+          </form>
+          <div class="col-span-full mt-8 flex justify-end">
+              <button id="foodSubmitBtnFinal" type="button" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
+                Confirm All
+              </button>
           </div>
 
-          <h2 class="text-xl font-bold text-center mb-4">
-            <hr class="my-4" />
-            <br />
-            🍲 Food Items & Quantity<br />br
-            <!-- <hr class="my-4"> -->
-          </h2>
+          <!-- Display Submitted Data -->
+          <div id="submittedData" class="mt-6 p-4 bg-gray-100 rounded-lg hidden">
+            <h3 class="text-lg font-semibold mb-2">Submitted Donation Details:</h3>
+            <pre id="formOutput" class="whitespace-pre-wrap"></pre>
+          </div>
 
-          <ul
-            id="food-items"
-            class="list-disc pl-6 space-y-2 text-sm leading-7"
-          >
-            <!-- Food list will be inserted dynamically -->
-          </ul>
-        </div>
+          <!-- <script>
+            const form = document.getElementById('donationForm');
+            const outputDiv = document.getElementById('submittedData');
+            const formOutput = document.getElementById('formOutput');
 
-        <script>
-          // Mock "background data"
-          const invoiceData = {
-            orderId: "ORD123456",
-            location: "Kolkata, West Bengal",
-            contactNumber: "‪+91 9876543210‬",
-            items: [
-              { name: "Rice", quantity: "2 kg" },
-              { name: "Paneer Curry", quantity: "1 kg" },
-              { name: "Chapati", quantity: "30 pcs" },
-            ],
-          };
+            form.addEventListener('submit', function (e) {
+              e.preventDefault(); // prevent form submission
 
-          // Injecting delivery details
-          document.getElementById("delivery-details").innerHTML = `
+              const formData = new FormData(form);
+              const data = {};
+              formData.forEach((value, key) => {
+                data[key] = value;
+              });
+
+              formOutput.textContent = JSON.stringify(data, null, 2); // show data nicely
+              outputDiv.classList.remove('hidden'); // make div visible
+            });
+          </script> -->
+        </main>
+      </div>
+      <div class="flex ">
+        <ul id="divUl">
+        </ul>
+
+      </div>
+    </main>
+    <main id="listing" class="flex-1 p-6 overflow-y-auto hidden">
+    </main>
+    <main id="delivery" class="flex-1 p-6 overflow-y-auto hidden">
+    <div id="invoice" class="bg-white shadow-lg p-6 w-full max-w-md rounded-lg">
+      <h2 class="text-xl font-bold text-center mb-4">
+        <br>
+        Delivery Details<br>
+        <hr class="my-4">
+      </h2>
+
+      <div id="delivery-details" class="mb-4 text-sm leading-7 space-y-2">
+        <!-- Fetched details will go here -->
+      </div>
+
+      <h2 class="text-xl font-bold text-center mb-4">
+        <hr class="my-4"><br>
+        🍲 Food Items & Quantity<br>br
+        <!-- <hr class="my-4"> -->
+      </h2>
+
+      <ul id="food-items" class="list-disc pl-6 space-y-2 text-sm leading-7">
+        <!-- Food list will be inserted dynamically -->
+      </ul>
+    </div>
+
+    <script>
+      // Mock "background data"
+      const invoiceData = {
+        orderId: "ORD123456",
+        location: "Kolkata, West Bengal",
+        contactNumber: "+91 9876543210",
+        items: [
+          { name: "Rice", quantity: "2 kg" },
+          { name: "Paneer Curry", quantity: "1 kg" },
+          { name: "Chapati", quantity: "30 pcs" }
+        ]
+      };
+
+
+      // Injecting delivery details
+      document.getElementById("delivery-details").innerHTML = `
       <p><strong>Order ID:</strong> ${invoiceData.orderId}</p>
       <p><strong>Location:</strong> ${invoiceData.location}</p>
       <p><strong>Contact Number:</strong> ${invoiceData.contactNumber}</p>
     `;
 
-<<<<<<< HEAD
-          // Injecting food items
-          const foodList = document.getElementById("food-items");
-          invoiceData.items.forEach((item) => {
-            const li = document.createElement("li");
-            li.textContent = `${item.name} - ${item.quantity}`;
-            foodList.appendChild(li);
-          });
-        </script>
-      </main>
-    </div>
-    <script src="dashboard.js"></script>
-  </body>
-</html>
-=======
-        // Injecting food items
-        const foodList = document.getElementById("food-items");
-        invoiceData.items.forEach((item) => {
-          const li = document.createElement("li");
-          li.textContent = `${item.name} - ${item.quantity}`;
-          foodList.appendChild(li);
-        });
-      </script>
+      // Injecting food items
+      const foodList = document.getElementById("food-items");
+      invoiceData.items.forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = `${ item.name } - ${ item.quantity }`;
+        foodList.appendChild(li);
+      });
+    </script>
     </main>
     <main id="profile" class="flex-1 p-6 overflow-y-auto hidden">
       <div class="flex-1 p-8">
@@ -505,12 +389,9 @@
         </div>
       </div>
     </main>
-    
-
-
-  </div>
+  
   <script src="dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
->>>>>>> 2e8e2431fb868919f09914357130a63042b2b1ce
