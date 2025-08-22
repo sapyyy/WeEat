@@ -152,7 +152,7 @@
 
     </main>
     <main id="addFood" class="flex-1 p-6 overflow-y-auto hidden">
-      <div class="flex h-screen">
+      <div class="flex ">
         <!-- Main Content -->
         <main class="flex-1 p-6 overflow-y-auto">
           <!-- Header -->
@@ -216,11 +216,17 @@
 
             <!-- Submit Section -->
             <div class="col-span-full mt-8 flex justify-end">
-              <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
+              <button id="foodSubmitBtn" type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
                 Confirm Donation
               </button>
             </div>
+            
           </form>
+          <div class="col-span-full mt-8 flex justify-end">
+              <button id="foodSubmitBtnFinal" type="button" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">
+                Confirm All
+              </button>
+          </div>
 
           <!-- Display Submitted Data -->
           <div id="submittedData" class="mt-6 p-4 bg-gray-100 rounded-lg hidden">
@@ -228,7 +234,7 @@
             <pre id="formOutput" class="whitespace-pre-wrap"></pre>
           </div>
 
-          <script>
+          <!-- <script>
             const form = document.getElementById('donationForm');
             const outputDiv = document.getElementById('submittedData');
             const formOutput = document.getElementById('formOutput');
@@ -245,8 +251,13 @@
               formOutput.textContent = JSON.stringify(data, null, 2); // show data nicely
               outputDiv.classList.remove('hidden'); // make div visible
             });
-          </script>
+          </script> -->
         </main>
+      </div>
+      <div class="flex ">
+        <ul id="divUl">
+        </ul>
+
       </div>
     </main>
     <main id="listing" class="flex-1 p-6 overflow-y-auto hidden">
@@ -380,6 +391,7 @@
     </main>
   
   <script src="dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 
 </html>
