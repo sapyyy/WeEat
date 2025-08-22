@@ -14,14 +14,11 @@ const foodSchema = new Schema({
     type: String,
     enum: [
       "Rice",
-      "Roti/Chapati",
       "Pulao/Biriyani",
-      "Idli/Dosa",
-      "Paneer",
+      "Chapati/Roti",
+      "Daal/Paneer",
       "Mixed Veg Dal",
-      "Sandwich",
       "Sweets",
-      "Noodles",
     ],
     required: true,
   },
@@ -34,7 +31,7 @@ const foodSchema = new Schema({
     required: true,
   },
   expiryTime: {
-    type: Date,
+    type: String,
   },
 });
 
@@ -79,8 +76,19 @@ const donorSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  delivery: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "DonorDelivery",
+    },
+  ],
   totalQuantity: {
     type: Number,
+    default: 0,
+  },
+  totalMeals: {
+    type: Number,
+    default: 0,
   },
 });
 
@@ -118,7 +126,7 @@ const receiverSchema = new Schema({
   orders: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Delivery",
+      ref: "ReceiverDelivery",
     },
   ],
 });
@@ -135,14 +143,10 @@ const listingSchema = new Schema({
       ref: "Food",
     },
   ],
-  preparedAt: {
-    type: Date,
-    required: true,
-  },
 });
 
 // defining schema for the delivery
-const deliverySchema = new Schema({
+const receiverDeliverySchema = new Schema({
   receiver: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Receiver",
@@ -163,7 +167,32 @@ const deliverySchema = new Schema({
   },
   phoneNo: {
     type: Number,
-    unique: true,
+    required: true,
+  },
+});
+
+// defining schemas for the admin delivery
+const donorDeliverySchema = new Schema({
+  donor: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Donor",
+  },
+  foods: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Food",
+    },
+  ],
+  delivered: {
+    type: Boolean,
+    default: false,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  phoneNo: {
+    type: Number,
     required: true,
   },
 });
@@ -171,14 +200,16 @@ const deliverySchema = new Schema({
 // creating models for every schema
 const Food = model("Food", foodSchema);
 const List = model("List", listingSchema);
-const Delivery = model("Delivery", deliverySchema);
+const ReceiverDelivery = model("ReceiverDelivery", receiverDeliverySchema);
+const DonorDelivery = model("DonorDelivery", donorDeliverySchema);
 const Donor = model("Donor", donorSchema);
 const Receiver = model("Receiver", receiverSchema);
 
 module.exports = {
   Food,
   List,
-  Delivery,
+  ReceiverDelivery,
+  DonorDelivery,
   Donor,
   Receiver,
 };
