@@ -13,6 +13,7 @@
     />
   </head>
 
+<<<<<<< HEAD
   <body class="bg-gray-100 text-gray-800 m-2">
     <div class="flex h-screen">
       <!-- Sidebar -->
@@ -44,6 +45,96 @@
             class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 text-2xl"
           >
             👩‍🍳
+=======
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeChat</title>
+  <link rel="stylesheet" href="./output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 text-gray-800 m-2">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow-md flex flex-col rounded-lg">
+      <div class="p-4 font-bold text-lg border-b rounded-lg">WeEat</div>
+      <nav id="navBtn" class="flex-1 p-4 space-y-2">
+        <div class="p-2 hover:bg-gray-100 rounded" id="dashboardBtn">Dashboard</div>
+        <div class="p-2 hover:bg-gray-100 rounded" id="addFoodBtn">Add Food</div>
+        <div class="p-2 hover:bg-gray-100 rounded" id="listingBtn">Listing</div>
+        <div class="p-2 hover:bg-gray-100 rounded" id="deliveryBtn">Delivery</div>
+      </nav>
+      <div  class="p-4 border-t">
+        <button id="editBtn" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+          Edit Profile
+        </button>
+      </div>
+      <div id="profileBtn" class="p-4 flex items-center space-x-2 border-t">
+        <div id="profileBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100 text-2xl">
+          👩‍🍳
+        </div>
+        <div id="profileBtn">
+          <p class="font-medium">Priyanka Garai</p>
+          <p class="text-xs text-gray-500">HITK</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="dashboard" class="flex-1 p-6 overflow-y-auto">
+      <!-- Header -->
+      <!-- Header -->
+      <!-- Header -->
+      <div class="flex justify-between items-center mb-6">
+        <!-- Left side: Welcome message -->
+        <div class="flex items-center space-x-6">
+          <span class="text-gray-500 font-semibold">
+            Welcome Back, Priyanka! 🌟 <br><br> Your generosity is reducing food waste. . .
+          </span>
+        </div>
+
+        <!-- Right side: Date -->
+        <div class="flex items-center space-x-2">
+          <span class="text-gray-500 font-medium">Badge Earned:</span>
+          <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full text-base font-semibold">
+            🏅 Gold Donor
+          </span>
+
+        </div>
+      </div>
+
+
+      <!-- Overview -->
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="bg-white shadow p-4 rounded-lg">
+          <p class="text-sm text-gray-500">Amount of meals donated</p>
+          <p class="text-2xl font-bold">222 kgs</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded-lg">
+          <p class="text-sm text-gray-500">Number of meals</p>
+          <p class="text-2xl font-bold">60 units</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded-lg">
+          <p class="text-sm text-gray-500">Carbon footprint avoided</p>
+          <p class="text-2xl font-bold">~27 kg CO₂e</p>
+        </div>
+        <div class="bg-white shadow p-4 rounded-lg">
+          <p class="text-sm text-gray-500">Carbon footprint avoided</p>
+          <p class="text-2xl font-bold">~2,500 liters</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        <!-- 📊 Visualization -->
+        <div class="bg-white shadow p-6 rounded-lg">
+          <h3 class="text-lg font-semibold mb-4">📊 Progress</h3>
+          <p class="text-sm mb-2">You’ve helped reach <strong>65%</strong> of this month’s food rescue goal</p>
+          <div class="w-full bg-gray-200 rounded-full h-3 mb-4">
+            <div class="bg-green-500 h-3 rounded-full" style="width: 65%;"></div>
+>>>>>>> 2e8e2431fb868919f09914357130a63042b2b1ce
           </div>
 
           <div>
@@ -316,6 +407,7 @@
       <p><strong>Contact Number:</strong> ${invoiceData.contactNumber}</p>
     `;
 
+<<<<<<< HEAD
           // Injecting food items
           const foodList = document.getElementById("food-items");
           invoiceData.items.forEach((item) => {
@@ -329,3 +421,96 @@
     <script src="dashboard.js"></script>
   </body>
 </html>
+=======
+        // Injecting food items
+        const foodList = document.getElementById("food-items");
+        invoiceData.items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = `${item.name} - ${item.quantity}`;
+          foodList.appendChild(li);
+        });
+      </script>
+    </main>
+    <main id="profile" class="flex-1 p-6 overflow-y-auto hidden">
+      <div class="flex-1 p-8">
+      <h1 class="text-2xl font-bold text-gray-800">Welcome Back, Priyanka! 🌟</h1>
+      <p class="text-gray-500">Your generosity is reducing food waste...</p>
+
+      <!-- Profile Section (Hidden initially) -->
+      <div id="profileSection" class="hidden mt-8">
+        <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100" alt="Profile" 
+                 class="w-20 h-20 rounded-full border-4 border-purple-500">
+            <div>
+              <h2 class="text-xl font-semibold text-gray-800">Priyanka Garai</h2>
+              <p class="text-gray-500">Heritage Institute of Technology</p>
+              <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-600 rounded-full">
+                🏅 Gold Donor
+              </span>
+            </div>
+          </div>
+          
+          <!-- Info -->
+          <div class="mt-6 space-y-3">
+            <p><span class="font-semibold text-gray-700">Email:</span> priyanka@example.com</p>
+            <p><span class="font-semibold text-gray-700">Total Donations:</span> 222 kgs</p>
+            <p><span class="font-semibold text-gray-700">Meals Provided:</span> 60 units</p>
+            <p><span class="font-semibold text-gray-700">Carbon Saved:</span> ~27 kg CO₂e</p>
+          </div>
+
+          <!-- Edit Button -->
+          <div class="mt-6">
+            <button class="bg-purple-600 text-white px-5 py-2 rounded-xl hover:bg-purple-700">
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main id="edit" class="flex-1 p-6 overflow-y-auto hidden">
+      <div class="flex-1 p-8">
+      <h1 class="text-2xl font-bold text-gray-800">Edit  Priyanka's Profile.... 🌟</h1>
+      <p class="text-gray-500">Your generosity is reducing food waste...</p>
+      <!-- Profile Section (Hidden initially) -->
+      <div id="profileSection" class="hidden mt-8">
+        <div class="bg-white shadow-lg rounded-2xl p-6 w-full max-w-xl">
+          <div class="flex items-center space-x-4">
+            <img src="https://i.pravatar.cc/100" alt="Profile" 
+                 class="w-20 h-20 rounded-full border-4 border-purple-500">
+            <div>
+              <h1>Edit page</h1>
+              <h2 class="text-xl font-semibold text-gray-800">Priyanka Garai</h2>
+              <p class="text-gray-500">Heritage Institute of Technology</p>
+              <span class="px-3 py-1 text-sm bg-yellow-100 text-yellow-600 rounded-full">
+                🏅 Gold Donor
+              </span>
+            </div>
+          </div>
+          
+          <!-- Info -->
+          <div class="mt-6 space-y-3">
+            <p><span class="font-semibold text-gray-700">Email:</span> priyanka@example.com</p>
+            <p><span class="font-semibold text-gray-700">Total Donations:</span> 222 kgs</p>
+            <p><span class="font-semibold text-gray-700">Meals Provided:</span> 60 units</p>
+            <p><span class="font-semibold text-gray-700">Carbon Saved:</span> ~27 kg CO₂e</p>
+          </div>
+
+          <!-- Edit Button -->
+          <div class="mt-6">
+            <button class="bg-purple-600 text-white px-5 py-2 rounded-xl hover:bg-purple-700">
+              Edit Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+
+
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
+>>>>>>> 2e8e2431fb868919f09914357130a63042b2b1ce
