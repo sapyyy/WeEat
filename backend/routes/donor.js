@@ -131,8 +131,8 @@ router.post("/listfood", validateUserMiddleware, async (req, res) => {
 });
 
 // router to get donor dashboard
-router.get("/dashboard", validateUserMiddleware, async (req, res) => {
-  const { donorId } = req.body;
+router.post("/dashboard", validateUserMiddleware, async (req, res) => {
+  const donorId = req.headers.id;
 
   try {
     const donor = await Donor.findById(donorId);
@@ -141,6 +141,8 @@ router.get("/dashboard", validateUserMiddleware, async (req, res) => {
     const listing = await List.findOne({ donor: donorId })
       .populate("foods")
       .exec();
+
+    console.log(listing);
 
     if (!listing) {
       return res.status(200).json({

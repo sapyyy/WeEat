@@ -8,7 +8,6 @@ mongoose.connect(process.env.URI);
 const foodSchema = new Schema({
   name: {
     type: String,
-    required: true,
   },
   type: {
     type: String,

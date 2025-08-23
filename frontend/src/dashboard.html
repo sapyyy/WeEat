@@ -68,19 +68,19 @@
       <div class="grid grid-cols-4 gap-4 mb-6">
         <div class="bg-white shadow p-4 rounded-lg">
           <p class="text-sm text-gray-500">Amount of meals donated</p>
-          <p class="text-2xl font-bold">222 kgs</p>
+          <p id="totalQuantity" class="text-2xl font-bold">222 kgs</p>
         </div>
         <div class="bg-white shadow p-4 rounded-lg">
           <p class="text-sm text-gray-500">Number of meals</p>
-          <p class="text-2xl font-bold">60 units</p>
+          <p id="totalMeals" class="text-2xl font-bold">60 units</p>
         </div>
         <div class="bg-white shadow p-4 rounded-lg">
           <p class="text-sm text-gray-500">Carbon footprint avoided</p>
-          <p class="text-2xl font-bold">~27 kg CO₂e</p>
+          <p id="carbonFootprint" class="text-2xl font-bold">~27 kg CO₂e</p>
         </div>
         <div class="bg-white shadow p-4 rounded-lg">
-          <p class="text-sm text-gray-500">Carbon footprint avoided</p>
-          <p class="text-2xl font-bold">~2,500 liters</p>
+          <p class="text-sm text-gray-500">Water saved</p>
+          <p id="waterFootprint" class="text-2xl font-bold">~2,500 liters</p>
         </div>
       </div>
 
@@ -170,12 +170,11 @@
               <select name="foodType" class="w-full border rounded-lg p-2 focus:ring-2 focus:ring-blue-500" required>
                 <option value="">-- Select Food Type --</option>
                 <option>Rice</option>
-                <option>Pulau/Biriyani</option>
+                <option>Pulao/Biriyani</option>
                 <option>Chapati/Roti</option>
-                <option>Idly/Dosa</option>
                 <option>Daal/Paneer</option>
                 <option>Mix Veg Curry</option>
-                <option>Sandwich/Sweets/Noodles</option>
+                <option>Sweets</option>
               </select>
             </div>
 
